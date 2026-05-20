@@ -1,45 +1,29 @@
-# Miscellaneous
-*.class
-*.log
-*.pyc
-*.swp
-.DS_Store
-.atom/
-.build/
-.buildlog/
-.history
-.svn/
-.swiftpm/
-migrate_working_dir/
-
-# IntelliJ related
-*.iml
-*.ipr
-*.iws
+# IDEs and OS files
 .idea/
+.vscode/
+*.iml
+.DS_Store
+*.log
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# Backend (Spring Boot)
+backend/backend/target/
+backend/backend/.mvn/
+backend/backend/mvnw
+backend/backend/mvnw.cmd
 
-# Flutter/Dart/Pub related
-**/doc/api/
-**/ios/Flutter/.last_build_id
-.dart_tool/
-.flutter-plugins-dependencies
-.pub-cache/
-.pub/
-/build/
-/coverage/
+# Flutter
+flutter_e_commerce/.dart_tool/
+flutter_e_commerce/.flutter-plugins-dependencies
+flutter_e_commerce/.pub-cache/
+flutter_e_commerce/.pub/
+flutter_e_commerce/build/
+flutter_e_commerce/flutter_01.log
 
-# Symbolication related
-app.*.symbols
+# Secrets & Sensitive info
+**/application-dev.properties
+**/application-prod.properties
+**/firebase-service-account.json
+.env
 
-# Obfuscation related
-app.*.map.json
-
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
+# Don't ignore application.properties but advise on environment variables for secrets
+# backend/backend/src/main/resources/application.properties
