@@ -71,16 +71,30 @@ Une solution e-commerce complète comprenant une application mobile moderne dév
 
 ## 📁 Structure du Projet
 
+### 🖥️ Backend (Spring Boot)
 ```text
-E_commerce_mobile/
-├── backend/                # API REST Spring Boot
-│   └── backend/
-│       ├── src/
-│       └── pom.xml
-├── flutter_e_commerce/     # Application Mobile Flutter
-│   ├── lib/
-│   └── pubspec.yaml
-└── README.md
+backend/backend/src/main/java/com/example/backend/
+├── config/             # Sécurité JWT, Firebase, CORS
+├── controller/         # API Endpoints (Auth, Cart, Order, Product, Payment)
+├── dto/                # Data Transfer Objects (Request/Response)
+├── exception/          # Gestion globale des erreurs
+├── model/              # Entités JPA (User, Product, Order, etc.)
+├── repository/         # Interfaces Spring Data JPA
+├── security/           # Filtres et utilitaires JWT
+└── service/            # Logique métier et intégrations (Stripe, FCM)
+```
+
+### 📱 Frontend (Flutter)
+```text
+flutter_e_commerce/lib/
+├── core/               # Constantes, Thèmes, Utils
+├── data/
+│   ├── models/         # Modèles de données
+│   ├── repositories/   # Abstraction des données
+│   └── services/       # API (Dio), Firebase, Stripe
+├── providers/          # Gestion d'état (Provider)
+├── screens/            # Pages (Auth, Home, Cart, Checkout, Profile)
+└── widgets/            # Composants UI réutilisables
 ```
 
 ## 🤝 Contribution
